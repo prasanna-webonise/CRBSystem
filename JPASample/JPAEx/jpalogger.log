@@ -1,0 +1,18 @@
+2015-08-19 19:37:52 ERROR CreateEmployee:29 - Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1215' for key 'PRIMARY'
+Error Code: 1062
+Call: INSERT INTO EMPLOYEE (EID, DEG, ENAME, SALARY) VALUES (?, ?, ?, ?)
+	bind => [1215, Technical Manager, Pradeep, 40000.0]
+Query: InsertObjectQuery(Employee [eid=1215, ename=Pradeep, salary=40000.0, deg=Technical Manager])
+2015-08-19 19:38:14 INFO  UpdateEmployee:18 - BEFORE {}Employee [eid=1215, ename=Gopal, salary=45000.0, deg=Technical Manager]
+2015-08-19 19:38:14 INFO  UpdateEmployee:21 - AFTER {}Employee [eid=1215, ename=Gopal, salary=45000.0, deg=Technical Manager]
+2015-08-19 19:42:10 ERROR CreateEmployee:30 - Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'DESIGATION' in 'field list'
+Error Code: 1054
+Call: INSERT INTO EMPLOYEE (EID, DESIGATION, ENAME, PHONENO, SALARY) VALUES (?, ?, ?, ?, ?)
+	bind => [101, Technical Manager, Pradeep, 44552200, 40000.0]
+Query: InsertObjectQuery(Employee [eid=101, ename=Pradeep, salary=40000.0, phoneno=44552200, desigation=Technical Manager])
+2015-08-19 19:43:32 INFO  FindEmployee:17 - Employee [eid=101, ename=Pradeep, salary=40000.0, phoneno=44552200, desigation=Technical Manager]
+2015-08-19 19:43:45 INFO  UpdateEmployee:18 - BEFORE {}Employee [eid=101, ename=Pradeep, salary=40000.0, phoneno=44552200, desigation=Technical Manager]
+2015-08-19 19:43:45 INFO  UpdateEmployee:21 - AFTER {}Employee [eid=101, ename=Pradeep, salary=50000.0, phoneno=44552200, desigation=Technical Manager]
+2015-08-19 19:44:57 INFO  DeleteEmployee:20 - removed
